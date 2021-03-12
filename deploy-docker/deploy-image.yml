@@ -1,0 +1,8 @@
+---
+- name: Pull docker image of SPECalc
+  hosts: all
+  tasks:
+    - name: Pull SPECalc
+      docker_image:
+        name: khandya1/SPECalc
+        source: pull

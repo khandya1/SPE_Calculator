@@ -4,5 +4,5 @@
   tasks:
     - name: Pull SPECalc
       docker_image:
-        name: khandya1/SPECalc
+        name: khandya1/specalc
         source: pull

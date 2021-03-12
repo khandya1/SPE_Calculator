@@ -15,70 +15,55 @@ public class Front {
         Integer n= sc.nextInt();
         switch (n)
         {
-            case 1: calcsqroot();
+            case 1:///calculate root
+                Integer x;
+                System.out.println("Enter a number whose root is to be calculated");
+                x=sc.nextInt();
+                Double op = calcsqroot(x);
+                System.out.println("Output is :" + op);
                 break;
-            case 2: calcfact();
+            case 2:////Calculate Factorial
+                Integer x1;
+                System.out.println("Enter a number whose factorial is to be calculated");
+                x1=sc.nextInt();
+                Integer fact = calcfact(x1);
+                System.out.println("Output is :" + fact);
                 break;
-            case 3: calcnatlog();
-
+            case 3:////calculate natural log
+                Double x2;
+                System.out.println("Enter a number whose natural log is to be calculated");
+                x2=sc.nextDouble();
+                Double nl =calcnatlog(x2);
+                System.out.println("Output is :" + nl);
                 break;
-            case 4: calcpower();
+            case 4://///calculate power
+                Integer n1, n2;
+                System.out.println("Enter a number whose power is to be calculated");
+                n1=sc.nextInt();
+                System.out.println("Enter power to be calculated");
+                n2=sc.nextInt();
+                Double power = calcpower(n1,n2);
+                System.out.println("Output is :" + power);
                 break;
         }
     }
 
-    private static void calcpower() {
-        Integer x, b;
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter a number whose power is to be calculated");
-        x=sc.nextInt();
-
-        System.out.println("Enter power to be calculated");
-        b=sc.nextInt();
-        Double op = pow(x,b);
-        System.out.println("Output is :" + op);
+    static Double calcpower(Integer x, Integer b) {
+        return pow(x,b);
     }
 
-    private static void calcnatlog() {
-        Double x;
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter a number whose power is to be calculated");
-        x=sc.nextDouble();
-
-        Double op = log(x);
-        System.out.println("Output is :" + op);
+    static Double calcnatlog(Double x) {
+        return log(x);
     }
 
-    private static void calcfact() {
-        Integer x;
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter a number whose power is to be calculated");
-        x=sc.nextInt();
+    static Integer calcfact(Integer x) {
         Integer op = 1;
-
         for(Integer i = x; i>=1; i--)
-        {
             op*= i;
-        }
-
-        System.out.println("Output is :" + op);
-
+        return op;
     }
 
-    private static void calcsqroot() {
-        Double x, b;
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter a number whose power is to be calculated");
-        x=sc.nextDouble();
-
-        System.out.println("Enter power to be calculated");
-        b=sc.nextDouble();
-        Double op = pow(x,1/b);
-        System.out.println("Output is :" + op);
-
+    static Double calcsqroot(Integer x) {
+       return pow(x,1/2.0);
     }
 }

@@ -4,16 +4,16 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 public class Factorial {
 
-    private Front calculator;
+    private Main calculator;
 
     @Before
     public void setUp() {
-        calculator = new Front();
+        calculator = new Main();
     }
 
     @Test
     public void factOne() {
-        assertTrue("testcase 1", 120==Front.calcfact(5));
+        assertTrue("testcase 1", 120== Main.calcfact(5));
         ;
     }
 

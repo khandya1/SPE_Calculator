@@ -3,10 +3,10 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 public class NaturalLog
 {
-    private Front calculator;
+    private Main calculator;
     @Before
     public void setUp() {
-        calculator = new Front();
+        calculator = new Main();
     }
     @Test
     public void log()

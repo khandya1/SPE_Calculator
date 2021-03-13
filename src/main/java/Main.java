@@ -17,7 +17,6 @@ public class Main {
                 System.out.println("Enter your choice for calculation \n 1. Square Root \n 2. Factorial Function \n 3.Natural Log (Base e) \n 4. Power Function \n 5. exit\n");
                 Scanner sc = new Scanner(System.in);
                 Integer n = sc.nextInt();
-                n = sc.nextInt();
 
                 switch (n) {
                     case 1:///calculate root

@@ -15,7 +15,7 @@ public class NaturalLog
         ;
     }
     @Test(expected = IllegalArgumentException.class)
-    public void logNegatve() {
+    public void logNegative() {
         long f = -1;
         calculator.calcnatlog(-1.0);
     }

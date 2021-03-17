@@ -55,45 +55,51 @@ public class Main {
                 System.out.println("Wrong Input");
             } catch (IllegalArgumentException e) {
                 logger.error("Input can't be negative");
-                System.out.println("Input cant be negative");
+                System.out.println("Input can't be negative");
             }
         }
     }
 
     static Double calcpower(Integer x, Integer b) {
-        logger.info("Power of  " + x + " to " + b + " is " + pow(x,b));
+        logger.info("[Power] - " + x + ", " + b);
+        logger.info("[RESULT - Power] - " + pow(x,b));
+
         return pow(x,b);
     }
 
     static Double calcnatlog(Double x) {
         if(x<0){
-            logger.info("[Throws exception - Natural Log] - Natural Log of negative number is not possible!");
+            logger.info("[EXCEPTION - Natural Log] - Natural Log of negative number is not possible!");
             throw new IllegalArgumentException();
         }
-        logger.info("Natural Log of  " + x);
-        logger.info("Output of natural log"  + log(x));
+        Double op = 0.0;
+        logger.info("[Natural Log] - " + x);
+        logger.info("[RESULT - Natural Log] - " + log(x));
         return log(x);
+
     }
 
     static Integer calcfact(Integer x) {
         if(x<0){
-            logger.info("[Throws exception - Factorial] - Factorial of negative number is not possible!");
+            logger.info("[Throws exception - Factorial] - Factorial of negative number is not possible");
             throw new IllegalArgumentException();
         }
-        Integer op = 1;
+        Integer fac = 1;
         for(Integer i = x; i>=1; i--)
-            op*= i;
-        logger.info("Factorial of " +x +" is  " + op);
+            fac*= i;
+        logger.info("[Factorial] - " + x);
+        logger.info("[RESULT - Factorial] - " + fac);
+        return fac;
 
-        return op;
     }
 
     static Double calcsqroot(Integer x) {
         if(x<0){
-            logger.info("[Throws exception - Square Root] - Square Root of negative number is not possible!");
+            logger.info("[Throws exception - Square Root] - Square Root of negative number is not possible");
             throw new IllegalArgumentException();
         }
-        logger.info("Square Root - of  " + x + " is "+ pow(x,1/2.0));
+        logger.info("[Square Root] - " + x);
+        logger.info("[RESULT - Square Root] - " + pow(x,1/2.0));
        return pow(x,1/2.0);
     }
 }

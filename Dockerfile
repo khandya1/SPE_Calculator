@@ -1,4 +1,4 @@
 FROM openjdk:11
-COPY ./target/MiniProjectSPE-1.0-SNAPSHOT.jar ./
+COPY ./target/MiniProjectSPE-1.0-SNAPSHOT-jar-with-dependencies.jar ./
 WORKDIR ./
-CMD ["java", "-cp", "MiniProjectSPE-1.0-SNAPSHOT.jar", "Main"]
+CMD ["java", "jar", "MiniProjectSPE-1.0-SNAPSHOT-jar-with-dependencies.jar", "Main"]
